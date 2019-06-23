@@ -76,10 +76,5 @@ def test_add_fule_card_wrong_request_format():
     assert '参数类型错误' in res['msg']
 
 
-@pytest.mark.negetive
-@pytest.mark.p2
-def test_add_fule_card_without_datasourceid():
-    pass
-
 # if __name__ == '__main__':
 #     pytest.main(['test_add_fuel_card.py', '-sv'])
