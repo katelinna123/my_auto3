@@ -14,4 +14,3 @@ BASEDIR = os.path.abspath(
 # 数据文件目录
 DATA_DIR = os.path.join(BASEDIR, "data")
 
-DATA_FILE = os.path.join(DATA_DIR, 'data.yaml')

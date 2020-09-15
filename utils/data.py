@@ -1,7 +1,10 @@
+import os
+
 import xlrd
 import yaml
 
-from utils.path import DATA_FILE
+from utils.path import DATA_DIR
+
 
 class Excel(object):
     def __init__(self, file_path):
@@ -16,16 +19,19 @@ class Excel(object):
             data.append(dict(zip(title, case_data)))
         return data
 
-def get_data():
-    with open(DATA_FILE, encoding='utf-8') as f:
+
+def load_yaml(file_name):
+    file_path = os.path.join(DATA_DIR, file_name)
+    with open(file_path, encoding='utf-8') as f:
         return yaml.load(f)  # 把yaml文件转为字典格式
 
 
 if __name__ == '__main__':
+    pass
     # excel = Excel('data.xls')
     # data = excel.get_sheet('添加加油卡')
     # print(data)
     # for case in data:
     #     print(case['TITLE'])
-    data = get_data()
-    print(data['test_add_fuel_card'])
+    # data = load_yaml()
+    # print(data['test_add_fuel_card'])

@@ -1,0 +1,7 @@
+requests
+pytest
+pytest-check
+pymysql
+pytest-html
+appium-python-client
+pytest-selenium
